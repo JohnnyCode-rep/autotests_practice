@@ -27,3 +27,15 @@ class LoginPageLocators:
     LOGIN_BUTTON = (By.XPATH, "//*[@class='button-1 login-button']")
 
 
+class AccountPageLocators:
+    CHANGE_PASSWORD_MENU_BUTTON = (By.XPATH, "//*[@href='/customer/changepassword']")
+    CHANGE_PASSWORD_OLD_PASSWORD = (By.ID, "OldPassword")
+    CHANGE_PASSWORD_NEW_PASSWORD = (By.ID, "NewPassword")
+    CHANGE_PASSWORD_CONFIRM_PASSWORD = (By.ID, "ConfirmNewPassword")
+    CHANGE_PASSWORD_BUTTON = (By.XPATH, "//*[@class='button-1 change-password-button']")
+    CHANGE_PASSWORD_SUCCESS_MESSAGE = (By.XPATH, "//*[@class='result']")
+    OLD_PASSWORD_EMPTY_ALERT = (By.XPATH, "//*[@class='field-validation-error'][@data-valmsg-for='OldPassword']")
+    NEW_PASSWORD_EMPTY_ALERT = (By.XPATH, "//*[@class='field-validation-error'][@data-valmsg-for='NewPassword']")
+    CONFIRM_PASSWORD_EMPTY_ALERT = (By.XPATH, "//*[@class='field-validation-error']["
+                                              "@data-valmsg-for='ConfirmNewPassword']")
+    INVALID_OLD_PASSWORD_ALERT = (By.XPATH, "//*[@class='validation-summary-errors']")
