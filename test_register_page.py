@@ -4,7 +4,7 @@ import names
 
 from .pages.main_page import MainPage
 from .pages.register_page import RegisterPage
-from .pages.locators import Links
+from .test_data.links import Links
 
 
 class TestRegisterFunctions:

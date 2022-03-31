@@ -27,8 +27,3 @@ class LoginPageLocators:
     LOGIN_BUTTON = (By.XPATH, "//*[@class='button-1 login-button']")
 
 
-class Links:
-    MAIN_PAGE_LINK = "http://demowebshop.tricentis.com/"
-    REGISTER_PAGE_LINK = "http://demowebshop.tricentis.com/register"
-    LOGIN_PAGE_LINK = "http://demowebshop.tricentis.com/login"
-

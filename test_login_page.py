@@ -3,7 +3,7 @@ import time
 
 from .pages.login_page import LoginPage
 from .test_data.user import User
-from .pages.locators import Links
+from .test_data.links import Links
 
 
 @pytest.mark.critical_checks
