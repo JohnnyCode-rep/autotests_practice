@@ -39,3 +39,4 @@ class AccountPageLocators:
     CONFIRM_PASSWORD_EMPTY_ALERT = (By.XPATH, "//*[@class='field-validation-error']["
                                               "@data-valmsg-for='ConfirmNewPassword']")
     INVALID_OLD_PASSWORD_ALERT = (By.XPATH, "//*[@class='validation-summary-errors']")
+    PASSWORDS_DO_NOT_MATCH_ALERT = (By.XPATH, "//*[text()='The new password and confirmation password do not match.']")

@@ -14,13 +14,13 @@ class AccountPage(MainPage):
         assert self.is_element_present(*AccountPageLocators.CHANGE_PASSWORD_BUTTON), "Change password button is not " \
                                                                                      "found "
 
-    def password_change(self, old_password, new_password):
+    def password_change(self, old_password, new_password, confirm_password):
         input_old_password = self.browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_OLD_PASSWORD)
         input_old_password.send_keys(old_password)
         input_new_password = self.browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_NEW_PASSWORD)
         input_new_password.send_keys(new_password)
         input_confirm_password = self.browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_CONFIRM_PASSWORD)
-        input_confirm_password.send_keys(new_password)
+        input_confirm_password.send_keys(confirm_password)
         button = self.browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_BUTTON)
         button.click()
 
@@ -40,4 +40,6 @@ class AccountPage(MainPage):
         assert self.is_element_present(*AccountPageLocators.CONFIRM_PASSWORD_EMPTY_ALERT), \
             "There is no message about an empty CONFIRM password field, but should be"
 
-
+    def should_be_passwords_do_not_match_alert(self):
+        assert self.is_element_present(*AccountPageLocators.PASSWORDS_DO_NOT_MATCH_ALERT), \
+            "There is no message about the discrepancy between the new and confirmed passwords, but there should be"

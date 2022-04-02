@@ -25,11 +25,11 @@ class TestAccountFunctions:
         change_password_menu = browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_MENU_BUTTON)
         change_password_menu.click()
         self.page.should_be_change_password_form()
-        self.page.password_change(User.PASSWORD, User.NEW_PASSWORD)
+        self.page.password_change(User.PASSWORD, User.NEW_PASSWORD, User.NEW_PASSWORD)
         self.page.should_be_password_change_message()
         change_password_menu = browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_MENU_BUTTON)
         change_password_menu.click()
-        self.page.password_change(User.NEW_PASSWORD, User.PASSWORD) # Возврат исходных тестовых данных
+        self.page.password_change(User.NEW_PASSWORD, User.PASSWORD, User.PASSWORD)  # Возврат исходных тестовых данных
         self.page.should_be_password_change_message()
         # time.sleep(5)
 
@@ -39,7 +39,7 @@ class TestAccountFunctions:
         change_password_menu = browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_MENU_BUTTON)
         change_password_menu.click()
         self.page.should_be_change_password_form()
-        self.page.password_change(User.INVALID_PASSWORD, User.NEW_PASSWORD)
+        self.page.password_change(User.INVALID_PASSWORD, User.NEW_PASSWORD, User.NEW_PASSWORD)
         self.page.should_be_invalid_old_password_alert()
         # time.sleep(5)
 
@@ -52,5 +52,15 @@ class TestAccountFunctions:
         button = browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_BUTTON)
         button.click()
         self.page.should_be_password_change_empty_fields_alert()
+        # time.sleep(5)
+
+    def test_change_password_invalid_confirm_password(self, browser):
+        self.page = AccountPage(browser, Links.ACCOUNT_INFO_PAGE)
+        self.page.open()
+        change_password_menu = browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_MENU_BUTTON)
+        change_password_menu.click()
+        self.page.should_be_change_password_form()
+        self.page.password_change(User.PASSWORD, User.NEW_PASSWORD, User.INVALID_PASSWORD)
+        self.page.should_be_passwords_do_not_match_alert()
         # time.sleep(5)
 
