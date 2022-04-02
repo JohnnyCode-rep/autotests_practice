@@ -40,3 +40,4 @@ class AccountPageLocators:
                                               "@data-valmsg-for='ConfirmNewPassword']")
     INVALID_OLD_PASSWORD_ALERT = (By.XPATH, "//*[@class='validation-summary-errors']")
     PASSWORDS_DO_NOT_MATCH_ALERT = (By.XPATH, "//*[text()='The new password and confirmation password do not match.']")
+    SHORT_NEW_PASSWORD_ALERT = (By.XPATH, "// *[text() = 'The password should have at least 6 characters.']")

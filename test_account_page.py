@@ -64,3 +64,12 @@ class TestAccountFunctions:
         self.page.should_be_passwords_do_not_match_alert()
         # time.sleep(5)
 
+    def test_change_password_short_new_password(self, browser):
+        self.page = AccountPage(browser, Links.ACCOUNT_INFO_PAGE)
+        self.page.open()
+        change_password_menu = browser.find_element(*AccountPageLocators.CHANGE_PASSWORD_MENU_BUTTON)
+        change_password_menu.click()
+        self.page.should_be_change_password_form()
+        self.page.password_change(User.PASSWORD, User.SHORT_NEW_PASSWORD, User.SHORT_NEW_PASSWORD)
+        self.page.should_be_short_new_password_alert()
+        time.sleep(5)

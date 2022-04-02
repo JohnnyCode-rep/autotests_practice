@@ -43,3 +43,7 @@ class AccountPage(MainPage):
     def should_be_passwords_do_not_match_alert(self):
         assert self.is_element_present(*AccountPageLocators.PASSWORDS_DO_NOT_MATCH_ALERT), \
             "There is no message about the discrepancy between the new and confirmed passwords, but there should be"
+
+    def should_be_short_new_password_alert(self):
+        assert self.is_element_present(*AccountPageLocators.SHORT_NEW_PASSWORD_ALERT), \
+            "There is no message about short new password, but there should be"
