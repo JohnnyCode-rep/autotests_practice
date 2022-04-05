@@ -17,3 +17,6 @@ class MainPage(BasePage):
         link.click()
         assert self.browser.current_url == "http://demowebshop.tricentis.com/login", "For some reason you are not " \
                                                                                      "on the login page"
+
+
+

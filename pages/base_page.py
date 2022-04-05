@@ -26,3 +26,7 @@ class BasePage:
         except TimeoutException:
             return True
         return False
+
+    def click_button(self, locator, value):
+        button = self.browser.find_element(locator, value)
+        button.click()
