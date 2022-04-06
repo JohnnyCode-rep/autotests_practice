@@ -48,8 +48,16 @@ class CategoriesPageLocators:
     SUCCESS_ADDING_TO_CART_MESSAGE = (By.XPATH, "//*[@class='bar-notification success']")
 
 
+class ProductPageLocators:
+    ADD_TO_CART_HEALTH_BOOK = (By.ID, "add-to-cart-button-22")
+    SUCCESS_ADDING_TO_CART_MESSAGE = (By.XPATH, "//*[@class='bar-notification success']")
+
+
 class CartPageLocators:
     CHECKBOX_REMOVE_FROM_CART = (By.XPATH, "//*[@name='removefromcart']")
     UPDATE_CART_BUTTON = (By.XPATH, "//*[@name='updatecart']")
     EMPTY_CART_MESSAGE = (By.XPATH, "//*[contains(text(), 'Your Shopping Cart is empty!')]")
     HEALTH_BOOK_IN_CART = (By.XPATH, "//*[@class='product']/a[@href='/health']")
+
+
+
