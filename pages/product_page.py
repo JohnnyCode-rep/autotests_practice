@@ -3,7 +3,7 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(MainPage):
-    def add_product_to_basket(self, how, what):
+    def add_product_to_cart(self, how, what):
         add_to_cart_button = self.browser.find_element(how, what)
         add_to_cart_button.click()
 

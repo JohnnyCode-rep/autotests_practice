@@ -58,6 +58,8 @@ class CartPageLocators:
     UPDATE_CART_BUTTON = (By.XPATH, "//*[@name='updatecart']")
     EMPTY_CART_MESSAGE = (By.XPATH, "//*[contains(text(), 'Your Shopping Cart is empty!')]")
     HEALTH_BOOK_IN_CART = (By.XPATH, "//*[@class='product']/a[@href='/health']")
-
+    ITEM_QUANTITY_FIELD = (By.XPATH, "//*[@class='qty nobr']/input")
+    PRICE_OF_ITEM = (By.XPATH, "//span[@class='product-unit-price']")
+    TOTAL_PRICE = (By.XPATH, "//span[@class='product-subtotal']")
 
 
