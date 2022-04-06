@@ -25,7 +25,7 @@ class TestChangePassword:
         self.page.password_change(User.PASSWORD, User.NEW_PASSWORD, User.NEW_PASSWORD)
         self.page.should_be_password_change_message()
         self.page.click_button(*AccountPageLocators.CHANGE_PASSWORD_MENU_BUTTON)
-        self.page.password_change(User.NEW_PASSWORD, User.PASSWORD, User.PASSWORD)  # Возврат исходных тестовых данных
+        self.page.password_change(User.NEW_PASSWORD, User.PASSWORD, User.PASSWORD)  # Return of the original test data
         self.page.should_be_password_change_message()
 
     def test_change_password_invalid_old_password(self, browser):
