@@ -25,6 +25,7 @@ class LoginPageLocators:
     REMEMBER_ME_CHECKBOX = (By.ID, "RememberMe")
     FORGOT_PASSWORD_BUTTON = (By.XPATH, "//*[@class='forgot-password']")
     LOGIN_BUTTON = (By.XPATH, "//*[@class='button-1 login-button']")
+    CHECKOUT_AS_GUEST_BUTTON = (By.XPATH, "//*[@class='button-1 checkout-as-guest-button']")
 
 
 class AccountPageLocators:
@@ -61,5 +62,24 @@ class CartPageLocators:
     ITEM_QUANTITY_FIELD = (By.XPATH, "//*[@class='qty nobr']/input")
     PRICE_OF_ITEM = (By.XPATH, "//span[@class='product-unit-price']")
     TOTAL_PRICE = (By.XPATH, "//span[@class='product-subtotal']")
+    TERMS_OF_SERVICE_CHECKBOX = (By.ID, "termsofservice")
+    CHECKOUT_BUTTON = (By.ID, "checkout")
 
 
+class OrderPageLocators:
+    CHECKBOX_REMOVE_FROM_CART = (By.XPATH, "//*[@name='removefromcart']")
+    FIRST_NAME = (By.ID, "BillingNewAddress_FirstName")
+    LAST_NAME = (By.ID, "BillingNewAddress_LastName")
+    EMAIL = (By.ID, "BillingNewAddress_Email")
+    COUNTRY = (By.ID, "BillingNewAddress_CountryId")
+    CITY = (By.ID, "BillingNewAddress_City")
+    ADDRESS_1 = (By.ID, "BillingNewAddress_Address1")
+    POSTAL_CODE = (By.ID, "BillingNewAddress_ZipPostalCode")
+    PHONE_NUMBER = (By.ID, "BillingNewAddress_PhoneNumber")
+    BILLING_ADDRESS_CONTINUE_BUTTON = (By.XPATH, "//div[@id='billing-buttons-container']/input")
+    SHIPPING_ADDRESS_CONTINUE_BUTTON = (By.XPATH, "//div[@id='shipping-buttons-container']/input")
+    SHIPPING_METHOD_CONTINUE_BUTTON = (By.XPATH, "//div[@id='shipping-method-buttons-container']/input")
+    PAYMENT_METHOD_CONTINUE_BUTTON = (By.XPATH, "//div[@id='payment-method-buttons-container']/input")
+    PAYMENT_INFO_CONTINUE_BUTTON = (By.XPATH, "//div[@id='payment-info-buttons-container']/input")
+    CONFIRM_BUTTON = (By.XPATH, "//div[@id='confirm-order-buttons-container']/input")
+    COMPLETE_ORDER_SECTION = (By.XPATH, "//*[@class='section order-completed']")

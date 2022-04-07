@@ -7,3 +7,8 @@ class User:
     SHORT_NEW_PASSWORD = "Test"
     INVALID_PASSWORD = "4321Test"
     GENDER = "male"
+    COUNTRY = "Russia"
+    CITY = "St. Petersburg"
+    ADDRESS = "Galernaya, 19"
+    POSTAL_CODE = "190000"
+    PHONE_NUMBER = "+76665554433"
